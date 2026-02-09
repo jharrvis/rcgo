@@ -41,7 +41,7 @@
     </div>
     <!-- Image Right Side - Absolute positioned at bottom -->
     <div class="hidden lg:block absolute right-0 bottom-0 w-1/2 h-full">
-        <img src="{{ asset('assets/img/rcgo.webp') }}?v=2" alt="RC Car"
+        <img src="{{ asset('assets/img/rcgo-hero-update.webp') }}?v=2" alt="RC Car"
             class="absolute bottom-0 right-0 h-auto w-full max-h-[90%] object-contain object-bottom">
     </div>
 </section>
