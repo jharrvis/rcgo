@@ -31,6 +31,19 @@
                     <p class="text-gray-400 text-sm mt-3">Dibantu pilih paket sesuai kebutuhan & lokasi</p>
                 </div>
             </div>
+
+            <div class="border-t border-gray-700/50 pt-8 mt-8">
+                <div class="text-gray-400 text-sm">
+                    <p class="mb-2">
+                        <strong class="text-gray-300">Alamat:</strong><br>
+                        KARANGNONGKO 006/005 NALUMSARI, JEPARA, , Jl. Soekarno Hatta, Ngembal Kulon, Kec. Jati,
+                        Kabupaten Kudus, Jawa Tengah 59341, Ngembal Kulon, Jati, Kudus, Jawa Tengah, 59341, ID
+                    </p>
+                    <p>
+                        <strong class="text-gray-300">No HP:</strong> 089504656116
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -50,10 +50,10 @@
 <div class="bg-gradient-to-r from-gray-900 to-black border-b border-gray-800 py-2 hidden md:block">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-xs text-gray-400">
         <div class="flex gap-6 items-center">
-            <a href="https://wa.me/6288221201998" target="_blank"
+            <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $company_phone) }}" target="_blank"
                 class="flex items-center gap-2 hover:text-orange-500 transition-colors">
                 <i class="fab fa-whatsapp text-green-500"></i>
-                <span>0882 2120 1998</span>
+                <span>{{ $company_phone }}</span>
             </a>
         </div>
         <div class="flex items-center gap-4">
