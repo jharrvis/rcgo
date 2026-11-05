@@ -66,10 +66,10 @@
                             <td class="px-6 py-4">
                                 <div class="flex items-center gap-3">
                                     <div
-                                        class="w-10 h-10 rounded-lg bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                                        class="w-16 aspect-[16/9] rounded-lg bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
                                         @if ($article->featured_image_url)
                                             <img src="{{ $article->featured_image_url }}"
-                                                class="w-full h-full object-cover" alt="">
+                                                class="w-full h-full object-contain bg-slate-100" alt="">
                                         @else
                                             <div class="w-full h-full flex items-center justify-center text-slate-400">
                                                 <i class="fas fa-newspaper"></i>
