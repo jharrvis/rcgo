@@ -104,6 +104,7 @@
                 class="group relative px-4 py-2 rounded-lg text-white hover:text-orange-400 font-medium transition-all text-sm hover:bg-gray-800/50">
                 Paket Usaha
             </a>
+            {{--
             <a href="{{ route('home') }}#ai-bonus"
                 class="group relative px-4 py-2 rounded-lg text-white hover:text-purple-400 font-medium transition-all text-sm hover:bg-gradient-to-r hover:from-purple-900/30 hover:to-blue-900/30">
                 <span class="flex items-center gap-2">
@@ -112,6 +113,7 @@
                         class="px-1.5 py-0.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-[10px] font-bold rounded uppercase">AI</span>
                 </span>
             </a>
+            --}}
         </div>
 
         <!-- Right Section: Auth & CTA -->
@@ -236,6 +238,7 @@
                 class="block text-white hover:text-orange-500 font-medium py-2.5 px-3 rounded-lg hover:bg-gray-800/50 transition-all">
                 Paket Usaha
             </a>
+            {{--
             <a href="{{ route('home') }}#ai-bonus"
                 class="block text-white hover:text-purple-400 font-medium py-2.5 px-3 rounded-lg hover:bg-gradient-to-r hover:from-purple-900/30 hover:to-blue-900/30 transition-all">
                 <span class="flex items-center gap-2">
@@ -244,6 +247,7 @@
                         class="px-1.5 py-0.5 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-[10px] font-bold rounded uppercase">AI</span>
                 </span>
             </a>
+            --}}
             {{-- <a href="{{ route('home') }}#addons"
                 class="block text-white hover:text-orange-500 font-medium py-2">Add-ons</a> --}}
 
