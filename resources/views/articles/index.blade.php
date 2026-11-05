@@ -85,9 +85,7 @@
                             </a>
                         @endforeach
                     </div>
-                    <div class="mt-10">
-                        {{ $articles->links() }}
-                    </div>
+                    {{ $articles->links('vendor.pagination.rcgo') }}
                 @else
                     <div class="text-center py-16">
                         <p class="text-gray-400 text-lg">Belum ada artikel yang cocok.</p>
