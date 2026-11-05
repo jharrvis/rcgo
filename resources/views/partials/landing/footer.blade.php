@@ -30,6 +30,10 @@
                     <a href="{{ $social_tiktok }}" target="_blank"
                         class="text-gray-400 hover:text-orange-500 transition-colors"><i class="fab fa-tiktok"></i></a>
                 </div>
+                <div class="flex justify-center md:justify-end mt-4">
+                    <a href="{{ route('articles.index') }}"
+                        class="text-gray-400 hover:text-orange-500 text-xs md:text-sm transition-colors">Artikel &amp; Tips Bisnis RC</a>
+                </div>
             </div>
         </div>
     </div>

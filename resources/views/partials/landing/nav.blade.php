@@ -104,6 +104,10 @@
                 class="group relative px-4 py-2 rounded-lg text-white hover:text-orange-400 font-medium transition-all text-sm hover:bg-gray-800/50">
                 Paket Usaha
             </a>
+            <a href="{{ route('articles.index') }}"
+                class="group relative px-4 py-2 rounded-lg text-white hover:text-orange-400 font-medium transition-all text-sm hover:bg-gray-800/50">
+                Artikel
+            </a>
             {{--
             <a href="{{ route('home') }}#ai-bonus"
                 class="group relative px-4 py-2 rounded-lg text-white hover:text-purple-400 font-medium transition-all text-sm hover:bg-gradient-to-r hover:from-purple-900/30 hover:to-blue-900/30">
@@ -237,6 +241,10 @@
             <a href="{{ route('home') }}#paket"
                 class="block text-white hover:text-orange-500 font-medium py-2.5 px-3 rounded-lg hover:bg-gray-800/50 transition-all">
                 Paket Usaha
+            </a>
+            <a href="{{ route('articles.index') }}"
+                class="block text-white hover:text-orange-500 font-medium py-2.5 px-3 rounded-lg hover:bg-gray-800/50 transition-all">
+                Artikel
             </a>
             {{--
             <a href="{{ route('home') }}#ai-bonus"

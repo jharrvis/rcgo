@@ -50,6 +50,9 @@
         <!-- Section 6: Testimoni -->
         @include('partials.landing.testimoni')
 
+        <!-- Section 6.9: Artikel Terbaru -->
+        @include('partials.landing.articles')
+
         <!-- Section 7: FAQ -->
         @include('partials.landing.faq')
 

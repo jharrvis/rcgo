@@ -64,3 +64,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Fitur Artikel RCGO
+
+Artikel dikelola Admin dari dashboard: **Konten > Artikel**.
+
+- Buat, edit, pratinjau, terbitkan, jadwalkan (status Terbit + tanggal publikasi di masa depan), dan hapus (soft delete, pulihkan dari filter Dihapus) artikel.
+- Isi artikel ditulis dalam Markdown; HTML mentah di-escape dan link tidak aman dihapus saat render, baik di pratinjau admin maupun halaman publik.
+- Gambar unggulan: JPG/PNG/WebP maks 2MB, disimpan di `storage/app/public/articles/Tahun/Bulan`, dihapus saat diganti atau saat artikel dihapus permanen.
+- Halaman publik: `/artikel` (daftar, pencarian, filter kategori, pagination) dan `/artikel/{slug}` (detail dengan meta SEO, Open Graph, dan JSON-LD Article). Draft dan artikel terjadwal mengembalikan 404 di route publik.
+- Landing page menampilkan maksimal 3 artikel terbit terbaru (unggulan diprioritaskan) di antara Testimoni dan FAQ, plus link Artikel di navigasi desktop, mobile, dan footer.
+- Rute admin berada di middleware `auth` + `admin`; Mitra mendapat 403.

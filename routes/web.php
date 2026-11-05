@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ArticlePreviewController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\GoogleAuthController;
 use App\Http\Controllers\LandingPageController;
 use Illuminate\Support\Facades\Route;
@@ -11,6 +13,10 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::get('/', [LandingPageController::class, 'index'])->name('home');
+
+// Public article pages (server-rendered for SEO; drafts/scheduled 404 here)
+Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/artikel/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 // Checkout routes - with and without package slug
 Route::get('/checkout-wizard/{package:slug?}', \App\Livewire\CheckoutWizard::class)->name('checkout.wizard');
@@ -59,6 +65,12 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/admin/products/addons', \App\Livewire\Admin\Product\AddonIndex::class)->name('admin.addons.index');
         Route::get('/admin/products/addons/create', \App\Livewire\Admin\Product\AddonForm::class)->name('admin.addons.create');
         Route::get('/admin/products/addons/{addon}/edit', \App\Livewire\Admin\Product\AddonForm::class)->name('admin.addons.edit');
+
+        // Article Management
+        Route::get('/admin/articles', \App\Livewire\Admin\Article\ArticleIndex::class)->name('admin.articles.index');
+        Route::get('/admin/articles/create', \App\Livewire\Admin\Article\ArticleForm::class)->name('admin.articles.create');
+        Route::get('/admin/articles/{article}/edit', \App\Livewire\Admin\Article\ArticleForm::class)->name('admin.articles.edit');
+        Route::get('/admin/articles/{article:id}/preview', ArticlePreviewController::class)->name('admin.articles.preview');
 
         // Order Management
         Route::get('/admin/orders', \App\Livewire\Admin\Order\OrderIndex::class)->name('admin.orders.index');

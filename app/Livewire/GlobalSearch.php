@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Addon;
+use App\Models\Article;
 use App\Models\Order;
 use App\Models\Package;
 use App\Models\User;
@@ -125,6 +126,21 @@ class GlobalSearch extends Component
                 'subtitle' => 'Rp ' . number_format($addon->price),
                 'url' => route('admin.addons.edit', $addon->id),
                 'icon' => 'fas fa-puzzle-piece'
+            ];
+        }
+
+        // Search Articles
+        $articles = Article::where('title', 'like', '%' . $this->search . '%')
+            ->limit(3)
+            ->get();
+
+        foreach ($articles as $article) {
+            $this->results[] = [
+                'type' => 'Artikel',
+                'title' => $article->title,
+                'subtitle' => ($article->category ?? 'Artikel') . ' - ' . $article->status_label,
+                'url' => route('admin.articles.edit', $article),
+                'icon' => 'fas fa-newspaper'
             ];
         }
     }

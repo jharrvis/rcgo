@@ -71,6 +71,24 @@
                 </div>
             </div>
 
+            <!-- Group Konten -->
+            <div class="mt-6" x-data="{ open: true }">
+                <button @click="open = !open"
+                    class="w-full flex items-center justify-between px-3 mb-2 text-xs font-semibold text-slate-400 uppercase tracking-wider hover:text-slate-600 outline-none">
+                    <span x-show="isSidebarOpen">Konten</span>
+                    <i class="fas fa-chevron-down text-[10px] smooth-transition" :class="open ? '' : '-rotate-90'"
+                        x-show="isSidebarOpen"></i>
+                </button>
+                <div x-show="open" x-transition class="space-y-1">
+                    <a href="{{ route('admin.articles.index') }}"
+                        class="flex items-center px-3 py-2.5 rounded-xl group {{ request()->routeIs('admin.articles.*') ? 'sidebar-item-active' : 'sidebar-item-inactive' }}">
+                        <i class="fas fa-newspaper w-6 text-center"></i>
+                        <span class="ml-3 font-medium smooth-transition"
+                            :class="isSidebarOpen ? 'opacity-100' : 'opacity-0 w-0 invisible'">Artikel</span>
+                    </a>
+                </div>
+            </div>
+
             <!-- Group Pengaturan -->
             <div class="mt-6">
                 <p class="px-3 mb-2 text-xs font-semibold text-slate-400 uppercase tracking-wider" x-show="isSidebarOpen">
