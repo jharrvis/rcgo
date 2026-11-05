@@ -66,7 +66,7 @@
                             <td class="px-6 py-4">
                                 <div class="flex items-center gap-3">
                                     <div
-                                        class="w-16 aspect-[16/9] rounded-lg bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
+                                        class="w-16 aspect-[2/1] rounded-lg bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
                                         @if ($article->featured_image_url)
                                             <img src="{{ $article->featured_image_url }}"
                                                 class="w-full h-full object-contain bg-slate-100" alt="">

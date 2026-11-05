@@ -80,7 +80,7 @@
                 <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Gambar Unggulan</label>
                 <div class="flex items-start gap-4">
                     <div
-                        class="w-48 aspect-[16/9] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 flex items-center justify-center relative">
+                        class="w-48 aspect-[2/1] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 flex items-center justify-center relative">
                         @if ($image)
                             <img src="{{ $image->temporaryUrl() }}" class="w-full h-full object-contain">
                         @elseif ($featured_image && ! $removeImage)
