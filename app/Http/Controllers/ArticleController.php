@@ -15,10 +15,6 @@ class ArticleController extends Controller
             ->orderBy('category')
             ->pluck('category');
 
-        $featured = Article::published()->featured()
-            ->orderByDesc('published_at')
-            ->first();
-
         $articles = Article::published()
             ->with('author')
             ->when($request->filled('search'), function ($query) use ($request) {
@@ -32,14 +28,11 @@ class ArticleController extends Controller
             ->when($request->filled('category'), function ($query) use ($request) {
                 $query->where('category', $request->input('category'));
             })
-            ->when($featured && ! $request->filled('search') && ! $request->filled('category'), function ($query) use ($featured) {
-                $query->where('id', '!=', $featured->id);
-            })
             ->orderByDesc('published_at')
             ->paginate(9)
             ->withQueryString();
 
-        return view('articles.index', compact('articles', 'categories', 'featured'));
+        return view('articles.index', compact('articles', 'categories'));
     }
 
     public function show(Article $article)

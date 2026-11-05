@@ -116,7 +116,7 @@
 
                 @if ($article->featured_image_url)
                     <img src="{{ $article->featured_image_url }}" alt="{{ $article->featured_image_alt ?? $article->title }}"
-                        class="w-full max-w-5xl aspect-[2/1] object-contain bg-gray-900 rounded-3xl mb-10">
+                        class="w-full max-w-5xl aspect-[2/1] object-cover bg-gray-900 rounded-3xl mb-10">
                 @endif
 
                 <div class="article-body">
@@ -145,7 +145,7 @@
                             <a href="{{ route('articles.show', $relatedArticle) }}"
                                 class="block bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-orange-500/50 transition-all">
                                 @if ($relatedArticle->featured_image_url)
-                                    <img src="{{ $relatedArticle->featured_image_url }}" alt="{{ $relatedArticle->featured_image_alt ?? $relatedArticle->title }}" class="w-full aspect-[2/1] object-contain bg-gray-900">
+                                    <img src="{{ $relatedArticle->featured_image_url }}" alt="{{ $relatedArticle->featured_image_alt ?? $relatedArticle->title }}" class="w-full aspect-[2/1] object-cover bg-gray-900">
                                 @endif
                                 <div class="p-6">
                                     <p class="text-xs text-orange-400 font-bold uppercase tracking-wider mb-2">

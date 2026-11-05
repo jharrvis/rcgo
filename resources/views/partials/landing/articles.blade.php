@@ -11,7 +11,7 @@
                     <a href="{{ route('articles.show', $article) }}"
                         class="block bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden hover:border-orange-500/50 transition-all">
                         @if ($article->featured_image_url)
-                            <img src="{{ $article->featured_image_url }}" alt="{{ $article->featured_image_alt ?? $article->title }}" class="w-full aspect-[2/1] object-contain bg-gray-900">
+                            <img src="{{ $article->featured_image_url }}" alt="{{ $article->featured_image_alt ?? $article->title }}" class="w-full aspect-[2/1] object-cover bg-gray-900">
                         @endif
                         <div class="p-6">
                             <p class="text-xs text-orange-400 font-bold uppercase tracking-wider mb-2">
